@@ -8,6 +8,14 @@ p , li{
     font-family: 'Roboto Mono', monospace, sans-serif;
 }
 
+.content hr {
+    color: #B5B2B2;
+}
+
+.content h1, .content header h1 {
+    text-shadow: 0 3px 25px rgb(0 0 0 / 1);
+}
+
 .content {
     display: grid;
     place-items: center;
