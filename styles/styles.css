@@ -12,7 +12,7 @@ p , li{
     color: #B5B2B2;
 }
 
-.content h1, .content header h1 {
+.content h2, .content header h1 {
     text-shadow: 0 3px 25px rgb(0 0 0 / 1);
 }
 
@@ -53,7 +53,7 @@ header h1 {
 
 main {
     grid-row: 2/3;
-    place-items: left;
+    width: 450px;
 }
 
 footer {
