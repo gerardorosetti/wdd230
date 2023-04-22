@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Ubuntu:ital@1&display=swap');
+
+h1, h2, h3, h4, h5, h6, .title-link {
+    font-family: 'Ubuntu', serif, sans-serif;
+}
+
+p , li{
+    font-family: 'Roboto Mono', monospace, sans-serif;
+}
+
+.content {
+    display: grid;
+    place-items: center;
+    margin-top: 60px;
+    grid-template-rows: repeat(3,auto);
+}
+
+header {
+    grid-row: 1/2;
+    border-radius: 20px;
+    background-color:#274690;
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-gap: 75px;
+    box-shadow: 0 3px 25px rgb(0 0 0 / 0.5);
+    color: white;
+}
+
+header img {
+    grid-column: 1/2;
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 75px;
+    place-self: center;
+}
+
+header h1 {
+    grid-column: 2/3;
+    padding-right: 15px;
+    padding-top: 50px;
+}
+
+main {
+    grid-row: 2/3;
+    place-items: left;
+}
+
+footer {
+    grid-row: 3/4;
+    text-align: center;
+    background-color: #274690;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 3px 25px rgb(0 0 0 / 0.5);
+    color: white;
+}
+
+footer .last-updated{
+    color: yellow;
+}
+
+footer .last-updated, footer p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
