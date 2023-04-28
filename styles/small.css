@@ -25,42 +25,43 @@ p , li{
 
 header {
     grid-row: 1/2;
-    border-radius: 20px;
     background-color:#274690;
     display: grid;
-    grid-template-columns: 100px auto;
-    grid-gap: 75px;
+    grid-template-rows: auto auto;
     box-shadow: 0 3px 25px rgb(0 0 0 / 0.5);
     color: white;
+    padding: 15px 50px 0px;
+    width: 100%;
+    text-align: center;
 }
 
 header img {
-    grid-column: 1/2;
+    grid-row: 1/2;
+    grid-column: 1/3;
     width: 120px;
     height: 150px;
     object-fit: cover;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 75px;
     place-self: center;
 }
 
 header h1 {
-    grid-column: 2/3;
-    padding-right: 45px;
-    padding-top: 50px;
+    grid-row: 2/3;
+    grid-column: 1/3;
 }
 
 main {
     grid-row: 2/3;
-    width: 450px;
+    width: 100%;
+}
+
+main h2 {
+    text-align: center;
 }
 
 footer {
     grid-row: 3/4;
     text-align: center;
     background-color: #274690;
-    border-radius: 20px;
     margin-top: 20px;
     box-shadow: 0 3px 25px rgb(0 0 0 / 0.5);
     color: white;
