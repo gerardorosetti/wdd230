@@ -29,5 +29,6 @@
     }
     footer {
         border-radius: 20px;
+        width: auto;
     }
 }
