@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Ubuntu:ital@1&display=swap');
+
+:root {
+    /*values of colors from my palette */
+    --primary-color: #274690   ;
+    --secondary-color: #A0C1D1 ;
+    --accent1-color: #5B8C5A;
+    --accent2-color: white;
+
+    /*values of chosen font(s) */
+    --heading-font: 'Ubuntu', serif, sans-serif;
+    --paragraph-font: 'Roboto Mono', monospace, sans-serif;
+
+    --headline-color-on-white: #274690;  /* headlines on a white background */
+    --headline-color-on-color: white; /* headlines on a colored background */
+    --paragraph-color-on-white: #274690; /* paragraph text on a white background */
+    --paragraph-color-on-color: white; /* paragraph text on a colored background */
+    --paragraph-background-color: #274690  ;
+    --nav-link-color: #274690;
+    --nav-background-color: #A0C1D1;
+    --nav-hover-link-color: white;
+    --nav-hover-background-color: #274690;
+  }
+
+h1, h2, h3, h4, h5, h6, .title-link {
+    font-family: 'Ubuntu', serif, sans-serif;
+}
+
+p , li{
+    font-family: 'Roboto Mono', monospace, sans-serif;
+}
+
+.content hr {
+    color: #B5B2B2;
+}
+
+.content h2, .content header h1 {
+    text-shadow: 0 3px 25px rgb(0 0 0 / 1);
+}
+
+.content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: repeat(3,auto);
+    max-width: 75em;
+}
+
+header {
+    background-color:#274690;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    color: white;
+    width: 100%;
+    place-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    grid-row: 1/2;
+    text-align: center;
+}
+
+header h3 {
+    grid-row: 2/3;
+}
+
+nav {
+    grid-row: 3/4;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a{
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 35px;
+    font-size: 24px;
+    transition: transform .3s;
+}
+
+nav a:hover{
+    opacity: .6;
+    transform: scale(1.1);
+}
+
+main {
+    width: 100%;
+    text-align: center;
+    background-color: 	#D3D3D3;
+}
+
+main h2 {
+    text-align: center;
+}
+
+main img{
+    align-self: center;
+}
+
+footer {
+    text-align: center;
+    background-color: #274690;
+    color: white;
+    width: 100%;
+}
+
+footer .last-updated{
+    color: yellow;
+}
+
+footer .last-updated, footer p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*This is for the design*/
+
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: 30px auto;
+    text-align: center;
+}
+.colors th {
+  background-color: #999;
+}
+.colors td{
+  width: 25%;
+  height: 3em;
+}
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent1 {
+  background-color: var(--accent1-color);
+}
+.accent2{
+  background-color: var(--accent2-color);
+}
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+}
+
+main nav {
+    background-color:#274690;
+}
