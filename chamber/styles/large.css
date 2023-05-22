@@ -37,12 +37,16 @@
     display: grid;
     place-items: center;
     grid-template-rows: repeat(3,auto);
-    grid-template-columns: repeat(4,auto);
+    grid-template-columns: repeat(4,1fr);
     grid-gap: 20px;
   }
 
   hr {
     display: none;
+  }
+
+  .weather hr {
+    display: inline;
   }
 
   .hero {
@@ -63,7 +67,7 @@
     grid-column: 1/2;
     grid-row: 1/2;
     min-height: 100%;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     display: flex;
     align-items: center;
   }
@@ -72,7 +76,7 @@
     grid-column: 1/2;
     grid-row: 2/4;
     min-height: 100%;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     display: flex;
     align-items: center;
   }
@@ -81,7 +85,7 @@
     grid-column: 2/4;
     grid-row: 3/4;
     min-height: 100%;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     display: flex;
     align-items: center;
   }
@@ -90,7 +94,7 @@
     grid-column: 4/5;
     grid-row: 1/4;
     min-height: 100%;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     place-items: center;
   }
 
