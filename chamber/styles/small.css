@@ -255,6 +255,8 @@ main hr {
   grid-column: 1/3;
   grid-row: 4/5;
   margin: 0;
+  width: 85%;
+  place-self: center;
 }
 
 
