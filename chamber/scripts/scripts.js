@@ -1,3 +1,5 @@
+//Date
+
 const daynames = [
 	"Sunday",
 	"Monday",
@@ -44,16 +46,18 @@ document.querySelector('.last-updated').textContent = `Last Updated: ${document.
 
 document.querySelector('.date-header').textContent = `${dayName}, ${currentDate.getDate()} ${monthName} ${currentYear}`
 
-// banner
+// Banner
 
 banner = document.getElementsByClassName('banner')[0]
 
-if (dayName != 'Monday')
+if (dayName != 'Monday' && dayName != 'Tuesday')
 {
 	banner.style.display = "none"
 }
 
-async function getWeather(num)
+// Weather
+
+async function getWeather()
 {
     let url = "http://api.weatherapi.com/v1/current.json?key=b86c967e8f1a4d6a8bd85728232205&q=Merida Venezuela&aqi=yes"
 
