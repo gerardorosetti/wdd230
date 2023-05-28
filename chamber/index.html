@@ -20,7 +20,7 @@
                 </h2>
             </div>
             <div class="img-title">
-                <img src="images/logo.png" alt="logo">
+                <img src="images/logo.webp" alt="logo">
                     <h1>Merida, Chamber of Commerce</h1>
             </div>
             <div class="links">
@@ -48,7 +48,11 @@
         </header>
         <main>
             <div class="hero">
-                <img src="images/hero.jpg" alt="hero">
+                <picture>
+                    <source media="(max-width: 42.5em)" srcset="images/hero-temp-small.jpg">
+                    <source media="(max-width: 85em)" srcset="images/hero-temp-medium.jpg">
+                    <img src="images/hero-temp-large.jpg" alt="hero">
+                </picture>
                 <div class="text-join">
                     <h1>
                         Welcome to Merida
@@ -125,5 +129,6 @@
         </footer>
     </div>
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/windchill.js"></script>
 </body>
 </html>
