@@ -1,3 +1,15 @@
+fetch("https://api.pexels.com/v1/search?query=people",{
+  headers: {
+    Authorization: "GYh2Cm1DMrNRHwbKldbixrEAwxk5VGGHAmqXJDp06lnwQE8sOvQqjmSR"
+  }
+})
+   .then(resp => {
+     return resp.json()
+   })
+   .then(data => {
+     console.log(data)
+   })
+
 let imagesToLoad = document.querySelectorAll("img[data-src]");
 const loadImages = (image) =>
 {
