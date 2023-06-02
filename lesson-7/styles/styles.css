@@ -17,6 +17,7 @@ body {
 img {
     width: 300px;
     height: 400px;
+    object-fit: cover;
 }
 
 img[data-src] {
@@ -25,5 +26,5 @@ img[data-src] {
 
 img {
     filter: blur(0em);
-    transition: filter 0.5s;
+    transition: filter 1s;
 }
