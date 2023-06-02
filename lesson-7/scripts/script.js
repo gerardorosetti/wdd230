@@ -63,4 +63,4 @@ setTimeout(function(){
             loadImages(img);
         });
     }
-}, 150);
+}, 300);
