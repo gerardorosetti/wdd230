@@ -362,4 +362,23 @@ footer {
   max-width: 100%;
 }
 
+.discover img[data-src] {
+  filter: blur(0.2em);
+}
+
+.discover img {
+  filter: blur(0em);
+  transition: filter 1s;
+}
+
+.lastVisit {
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: #A0C1D1;
+}
+
+.discover section .text {
+  background-color: #A0C1D1;
+}
+
 /* END DISCOVER */

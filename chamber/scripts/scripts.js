@@ -54,3 +54,23 @@ if (dayName != 'Monday' && dayName != 'Tuesday')
 {
 	banner.style.display = "none"
 }
+
+// Days Visit
+
+const today = Date.now();
+
+if (!localStorage.getItem("visitDate")) {
+	localStorage.setItem("visitDate", today);
+}
+
+console.log(localStorage.getItem("visitDate"));
+
+const toSet = parseInt(today) - parseInt(localStorage.getItem("visitDate"));
+
+localStorage.setItem("visitDate", today);
+
+const days = toSet*1.1574e-8
+
+const lastVisit = document.getElementsByClassName("lastVisit")[0]
+lastVisit.innerHTML = "Days Since Last Visit: " + days.toFixed(0) + " Days"
+console.log(localStorage.getItem("visitDate"))

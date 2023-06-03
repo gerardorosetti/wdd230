@@ -95,4 +95,14 @@
     display: inline;
   }
 
+  /* DISCOVER */
+  .discover img {
+    transition: border-radius .5s;
+  }
+
+  .discover img:hover {
+    border-radius: 15px 150px;
+  }
+  /* DISCOVER END */
+
 }
