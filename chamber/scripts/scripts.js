@@ -63,7 +63,7 @@ if (!localStorage.getItem("visitDate")) {
 	localStorage.setItem("visitDate", today);
 }
 
-console.log(localStorage.getItem("visitDate"));
+// console.log(localStorage.getItem("visitDate"));
 
 const toSet = parseInt(today) - parseInt(localStorage.getItem("visitDate"));
 
@@ -72,5 +72,17 @@ localStorage.setItem("visitDate", today);
 const days = toSet*1.1574e-8
 
 const lastVisit = document.getElementsByClassName("lastVisit")[0]
-lastVisit.innerHTML = "Days Since Last Visit: " + days.toFixed(0) + " Days"
-console.log(localStorage.getItem("visitDate"))
+if (lastVisit){
+	lastVisit.innerHTML = "Days Since Last Visit: " + days.toFixed(0) + " Days"
+	// console.log(localStorage.getItem("visitDate"))
+}
+
+/* Join */
+
+const hidden_date = document.getElementById('hidden-date')
+if (hidden_date)
+{
+	// console.log(hidden_date.value)
+	hidden_date.value = currentDate
+	// console.log(hidden_date.value)
+}

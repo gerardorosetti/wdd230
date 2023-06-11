@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assignment Chmbaer of Commerce for Gerardo Rosetti in WDD 230: Web Frontend Development at Brigham Young University - Idaho">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script defer src="scripts/lazyload.js"></script>
+    <title>Merida's Chamber of Commerce</title>
+</head>
+<body>
+    <div class="content">
+        <header>
+            <div class="banner" id="banner">
+                <h2>
+                    🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.
+                </h2>
+            </div>
+            <div class="img-title">
+                <img src="images/logo.webp" alt="logo">
+                    <h1>Merida, Chamber of Commerce</h1>
+            </div>
+            <div class="links">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.png" alt="fb icon">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+            <div class="h3-bg"><h3 class="fill"></h3></div>
+            <h3 class="date-header"></h3>
+            <nav class="first-nav">
+                <ul class="navigation">
+                    <li><a href="#" onclick="togglemenu()">&#9776;</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="join">
+                <hr>
+                <form action="thankyou.html" method="get">
+                    <br>
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <!-- First Name -->
+                        <p>
+                            <label>
+                                What is your first name?
+                                <input type="text" name="firstName" required>
+                            </label>
+                        </p>
+                        <!-- Last Name -->
+                        <p>
+                            <label>
+                                What is your last name?
+                                <input type="text" name="lastName" required>
+                            </label>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <br>
+                    <fieldset>
+                        <legend>Business Information</legend>
+                        <!-- Business Position Name -->
+                        <p>
+                            <label>
+                                What is your business position title?
+                                <input type="text" name="businessPosition" pattern="[A-Za-z\- ]+" minlength="7">
+                            </label>
+                        </p>
+                        <!-- Email -->
+                        <p>
+                            <label>
+                                What's your email address?
+                                <input type="email" name="email" placeholder="example@mail.com" required>
+                            </label>
+                        </p>
+                        <!-- Phone -->
+                        <p>
+                            <label>
+                                What is your cell phone number?
+                                <input type="tel" name="phone" required pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="123-45-678" required>
+                            </label>
+                        </p>
+                        <!-- Business Name/Title -->
+                        <p>
+                            <label>
+                                What is your business name/title?
+                                <input type="text" name="businessName" required>
+                            </label>
+                        </p>
+                        <!-- Membership Level -->
+                        <p>
+                            <fieldset>
+                                    <legend>Select your membership level</legend>
+                                    <label>
+                                        NP Membership
+                                        <input type="radio" name="membershipLevel" value="NP">
+                                        <br>
+                                        (This is for non profit organizations and there is no fee)
+                                    </label>
+                                    <br>
+                                    <label>
+                                        Bronze Membership
+                                        <input type="radio" name="membershipLevel" value="Bronze">
+                                    </label>
+                                    <br>
+                                    <label>
+                                        Silver Membership
+                                        <input type="radio" name="membershipLevel" value="Silver">
+                                    </label>
+                                    <br>
+                                    <label>
+                                        Gold Membership
+                                        <input type="radio" name="membershipLevel" value="Gold">
+                                    </label>
+                                    <br>
+                                    <p>
+                                        This memberships have increasing costs as well as increased benefits per level like trainings, advertising (like on the home page spotlights), event discounts, etc.
+                                    </p>
+                            </fieldset>
+                        </p>
+                        <!-- Business Description -->
+                        <p>
+                            <label>Give us your business description</label>
+                            <textarea name="businessDescription" rows="5"></textarea>
+                        </p>
+                    </fieldset>
+
+                    <!-- Hidden Date -->
+                    <label>
+                        <input type="hidden" id="hidden-date" name="date" value="DATE" >
+                    </label>
+
+                    <!-- Submit -->
+
+                    <!-- <p>
+                        <button>Submit</button>
+                    </p> -->
+
+                    <p>
+                        <label>
+                            <input type="submit">
+                        </label>
+                    </p>
+                    <br>
+                </form>
+                <hr>
+            </div>
+        </main>
+        <footer>
+            <p>&copy;<span class="footer-year">year</span>  .:|:. Gerardo A. Rosetti .:|:. Venezuela</p>
+            <p class="last-updated">Last Updated</p>
+        </footer>
+    </div>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

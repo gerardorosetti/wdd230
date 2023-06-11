@@ -186,4 +186,18 @@
 
   /* END DISCOVER */
 
+  /* START JOIN */
+
+  .join, .thankYou {
+    grid-column: 1/5;
+    grid-row: 1/4;
+  }
+
+  .join hr, .thankYou hr {
+    width: 96em;
+  }
+
+
+  /* END JOIN */
+
 }
