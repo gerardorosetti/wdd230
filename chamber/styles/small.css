@@ -383,7 +383,7 @@ footer {
 
 /* END DISCOVER */
 
-/* START JOIN*/
+/* START JOIN AND THANK YOU */
 
 .join form{
     font: 1em sans-serif;
@@ -448,22 +448,18 @@ main:has(.join), main:has(.thankYou) {
   border: 5px solid #5B8C5A;
 }
 
-/* END JOIN */
+.thankYou {
+  border: 3px dashed #10104b;
+}
 
-/* START THANK YOU */
+.thankYou h1{
+  color: #10104b;
+}
+.thankYou h2{
+  color: #A0C1D1;
+}
+.thankYou h3 {
+  padding: 2%;
+}
 
-  .thankYou {
-    border: 3px dashed #10104b;
-  }
-
-  .thankYou h1{
-    color: #10104b;
-  }
-  .thankYou h2{
-    color: #A0C1D1;
-  }
-  .thankYou h3 {
-    padding: 2%;
-  }
-
-/* END THANK YOU */
+/* END JOIN AND THANK YOU */

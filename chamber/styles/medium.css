@@ -108,11 +108,15 @@
   /* START JOIN AND THANK YOU */
 
   main:has(.join), main:has(.thankYou) {
+
     width: 100%;
+
   }
 
   .join hr, .thankYou hr {
+
     width: 100%;
+
   }
 
   /* END JOIN AND THANK YOU */

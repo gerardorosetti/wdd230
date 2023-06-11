@@ -186,7 +186,7 @@
 
   /* END DISCOVER */
 
-  /* START JOIN */
+  /* START JOIN AND THANK YOU*/
 
   .join, .thankYou {
     grid-column: 1/5;
@@ -197,7 +197,6 @@
     width: 96em;
   }
 
-
-  /* END JOIN */
+  /* END JOIN AND THANK YOU */
 
 }

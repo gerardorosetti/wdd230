@@ -73,6 +73,7 @@ const days = toSet*1.1574e-8
 
 const lastVisit = document.getElementsByClassName("lastVisit")[0]
 if (lastVisit){
+	//Verify
 	lastVisit.innerHTML = "Days Since Last Visit: " + days.toFixed(0) + " Days"
 }
 
