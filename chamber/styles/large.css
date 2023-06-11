@@ -202,6 +202,8 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  /* WORKING THE TABLE AND ADDING SOME GRID */
+
   .join .rad-tab .radio {
     grid-row: 1/3;
     grid-column: 1/2;

@@ -496,10 +496,11 @@ main:has(.join), main:has(.thankYou) {
   background-color: #A0C1D1;
 }
 
-input[type="text"], input[type="tel"], input[type="email"] {
+.join input[type="text"], .join input[type="tel"], .join input[type="email"] {
   max-width: 300px;
 }
 
+/* WORKING THE TABLE*/
 .table td, th {
   border: 1px solid rgb(190, 190, 190);
   padding: 10px;
