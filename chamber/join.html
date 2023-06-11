@@ -52,7 +52,7 @@
                 <hr>
                 <form action="thankyou.html" method="get">
                     <br>
-                    <fieldset>
+                    <fieldset class="personal-inf">
                         <legend>Personal Information</legend>
                         <!-- First Name -->
                         <p>
@@ -71,7 +71,7 @@
                     </fieldset>
                     <br>
                     <br>
-                    <fieldset>
+                    <fieldset class="business-inf">
                         <legend>Business Information</legend>
                         <!-- Business Position Name -->
                         <p>
@@ -103,33 +103,83 @@
                         </p>
                         <!-- Membership Level -->
                         <p>
-                            <fieldset>
+                            <fieldset class="rad-tab">
                                     <legend>Select your membership level</legend>
-                                    <label>
-                                        NP Membership
-                                        <input type="radio" name="membershipLevel" value="NP">
+                                    <div class="radio">
+                                        <label>
+                                            NP Membership
+                                            <input type="radio" name="membershipLevel" value="NP" checked >
+                                            <br>
+                                            (This is for non profit organizations and there is no fee)
+                                        </label>
                                         <br>
-                                        (This is for non profit organizations and there is no fee)
-                                    </label>
-                                    <br>
-                                    <label>
-                                        Bronze Membership
-                                        <input type="radio" name="membershipLevel" value="Bronze">
-                                    </label>
-                                    <br>
-                                    <label>
-                                        Silver Membership
-                                        <input type="radio" name="membershipLevel" value="Silver">
-                                    </label>
-                                    <br>
-                                    <label>
-                                        Gold Membership
-                                        <input type="radio" name="membershipLevel" value="Gold">
-                                    </label>
-                                    <br>
-                                    <p>
+                                        <label>
+                                            Bronze Membership
+                                            <input type="radio" name="membershipLevel" value="Bronze">
+                                        </label>
+                                        <br>
+                                        <label>
+                                            Silver Membership
+                                            <input type="radio" name="membershipLevel" value="Silver">
+                                        </label>
+                                        <br>
+                                        <label>
+                                            Gold Membership
+                                            <input type="radio" name="membershipLevel" value="Gold">
+                                        </label>
+                                    </div>
+                                    <div class="table">
+                                        <table>
+                                            <caption>Membership Benefits</caption>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="5">Subscriptions</th>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Non-Profit (Free)</th>
+                                                    <th scope="col">Bronze ($15 per month)</th>
+                                                    <th scope="col">Silver ($20 per month)</th>
+                                                    <th scope="col">Gold ($25 per month)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Reunions Notifications</th>
+                                                    <td>✔️</td>
+                                                    <td>✔️</td>
+                                                    <td>✔️</td>
+                                                    <td>✔️</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Courses Access</th>
+                                                    <td>❌</td>
+                                                    <td>✔️</td>
+                                                    <td>✔️</td>
+                                                    <td>✔️</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Specific Training</th>
+                                                    <td>❌</td>
+                                                    <td>❌</td>
+                                                    <td>✔️</td>
+                                                    <td>✔️</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Exclusive Events</th>
+                                                    <td>❌</td>
+                                                    <td>❌</td>
+                                                    <td>❌</td>
+                                                    <td>✔️</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- <p>
                                         This memberships have increasing costs as well as increased benefits per level like trainings, advertising (like on the home page spotlights), event discounts, etc.
-                                    </p>
+                                    </p> -->
                             </fieldset>
                         </p>
                         <!-- Business Description -->

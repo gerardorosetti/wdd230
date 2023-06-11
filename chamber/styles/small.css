@@ -387,7 +387,7 @@ footer {
 
 .join form{
     font: 1em sans-serif;
-    max-width: 25em;
+    /* max-width: 25em; */
 }
 .join p > label{
     display: block;
@@ -460,6 +460,97 @@ main:has(.join), main:has(.thankYou) {
 }
 .thankYou h3 {
   padding: 2%;
+}
+
+.join legend {
+  padding-top: 15px;
+}
+
+.join .rad-tab {
+  display: grid;
+  grid-template-rows: auto auto;
+  background-color: #fff;
+}
+
+.join .rad-tab .radio {
+  grid-row: 1/2;
+  margin: 4%;
+  padding: 10px;
+  place-self: center;
+  border: 2px dashed black;
+}
+
+.join .rad-tab .table {
+  grid-row: 2/3;
+  margin: 4%;
+}
+
+.join form .personal-inf {
+  margin: 0 auto;
+  max-width: 25em;
+  background-color: #A0C1D1;
+}
+
+.join form .business-inf {
+  max-width: 55em;
+  background-color: #A0C1D1;
+}
+
+input[type="text"], input[type="tel"], input[type="email"] {
+  max-width: 300px;
+}
+
+.table td, th {
+  border: 1px solid rgb(190, 190, 190);
+  padding: 10px;
+}
+
+.table tr:nth-child(even) {
+  background-color:  #989898;
+}
+
+.table thead {
+  background-color: black;
+  color: white;
+}
+
+.table td {
+  text-align: center;
+}
+
+.table th{
+  min-width: none;
+}
+
+.table th[scope='row'] {
+  width: 50px;
+}
+
+.table th[scope='col']:first-child {
+  background-color: black;
+  color: white;
+}
+
+.table th[scope='col'] {
+  background-color: #696969;
+  color: #fff;
+}
+
+.table caption {
+  padding: 10px;
+  caption-side: bottom;
+}
+
+.table table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200, 200, 200);
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+}
+
+.table th:first-child {
+  border: none;
 }
 
 /* END JOIN AND THANK YOU */
