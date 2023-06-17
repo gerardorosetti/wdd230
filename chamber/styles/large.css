@@ -227,7 +227,7 @@
     }
     .directory .grid:last-child {
       grid-column: auto;
-      width: 100%;
+      width: auto;
     }
 
     .directory .list {

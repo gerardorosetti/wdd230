@@ -26,8 +26,6 @@ const displayData = (companies) => {
         image.setAttribute('src', data.imageurl);
         image.setAttribute('alt', `Image/Logo of ${data.name}`);
         image.setAttribute('loading', 'lazy');
-        // portrait.setAttribute('width', '340');
-        // portrait.setAttribute('height', '440');
 
         card.appendChild(image);
 
