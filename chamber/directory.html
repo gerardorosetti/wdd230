@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
-    <script defer src="scripts/lazyload.js"></script>
+    <script defer src="scripts/directory.js"></script>
     <title>Merida's Chamber of Commerce</title>
 </head>
 <body>
@@ -43,19 +43,17 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="discover.html">Discover</a></li>
                     <li><a href="join.html">Join</a></li>
-                    <li><a href="directory.html">Contact Us</a></li>
+                    <li><a href="directory.html">Directory</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <div class="thankYou">
-
-                <hr>
-                <h1>Thank You so Much for Your Submission</h1>
-                <h2>We Will Contact You as Soon as Possible</h2>
-                <h3>Please, feel free to keep reviewing the rest of the webpage</h3>
-                <hr>
-
+            <div class="directory">
+                <div class="menu">
+                    <button id="grid">⏹️Grid</button>
+                    <button id="list">📄List</button>
+                </div>
+                <div class="cards"></div>
             </div>
         </main>
         <footer>
@@ -64,5 +62,6 @@
         </footer>
     </div>
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/windchill.js"></script>
 </body>
 </html>

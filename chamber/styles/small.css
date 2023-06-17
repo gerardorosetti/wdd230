@@ -555,3 +555,87 @@ main:has(.join), main:has(.thankYou) {
 }
 
 /* END JOIN AND THANK YOU */
+
+/* START DIRECTORY */
+
+/* .directory .cards section{
+  text-align: center;
+  border: 5px dashed #A0C1D1;
+  margin: 10px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  margin: 2%;
+  padding: 2%;
+  border: 8px solid #10104b;
+  background-color: #fdfdff;
+} */
+
+.directory .grid {
+  display: grid;
+  grid-template-rows: repeat(4,auto);
+  margin: 30px;
+  padding: 10px 0;
+  background: #eee;
+  box-shadow: 0 8px 8px -4px lightblue;
+}
+
+.directory .grid h3{
+  margin: 0;
+}
+
+.directory .cards section img{
+  border-radius: 50px;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.directory .menu {
+	margin: 1rem auto;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	background-color: #bed;
+	text-align: center;
+}
+
+.directory .menu button {
+	padding: 1rem;
+	font-weight: 700;
+}
+
+.directory .no-display {
+  display: none;
+}
+
+.directory .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  margin: 8px 0;
+  border: 2px dashed #5B8C5A;
+  box-shadow: 0 8px 8px -4px #474747;
+}
+
+
+main:has(.directory){
+  width: 100%;
+}
+.directory:has(.list){
+  width: 100%;
+}
+/* main:has(.directory:has(.list)){
+  width: 80em;
+} */
+
+.directory .list h3{
+  margin: 3px 0;
+}
+
+.directory .list:nth-child(odd) {
+  background-color: #A0C1D1;
+}
+
+/* END DIRECTORY */

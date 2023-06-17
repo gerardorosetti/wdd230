@@ -216,4 +216,25 @@
 
   /* END JOIN AND THANK YOU */
 
+    /* START DIRECTORY */
+    main:has(.directory)
+    {
+      display: block;
+    }
+    .directory .gridView {
+      grid-template-rows: repeat(3,1fr);
+      grid-template-columns: repeat(3,1fr);
+    }
+    .directory .grid:last-child {
+      grid-column: auto;
+      width: 100%;
+    }
+
+    .directory .list {
+      margin: 0 auto;
+      width: 96%;
+    }
+
+    /* END DIRECTORY */
+
 }
