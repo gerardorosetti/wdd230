@@ -19,9 +19,10 @@ const displayData = (companies) => {
         name.textContent = `${data.name}`;
         address.textContent = `Address: ${data['address']}`;
         phone.textContent = `Phone: ${data.phone}`;
-        websiteLink.textContent = `Website Link: ${data['website']}`;
+        websiteLink.textContent = `${data['website']}`;
         websiteLink.href = data.website;
-        website.appendChild(websiteLink)
+        website.innerText = `Website Link: `;
+        website.appendChild(websiteLink);
 
         image.setAttribute('src', data.imageurl);
         image.setAttribute('alt', `Image/Logo of ${data.name}`);
