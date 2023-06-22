@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Ubuntu:ital@1&display=swap');
+
+h1, h2, h3, h4, h5, h6, .title-link {
+    font-family: 'Ubuntu', serif, sans-serif;
+}
+
+p , li, figcaption{
+    font-family: 'Roboto Mono', monospace, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+.bg{
+    background-color: #989898;
+    border-radius: 500px;
+    max-width: max-content;
+    margin: 0 auto;
+}
+
+.bg p{
+    max-width: 70%;
+    padding-left: 15%;
+}
+
+hr{
+    max-width: 650px;
+}
+
+h1 {
+    text-shadow: 2px 2px 8px #274690;
+}
+
+.title, .footer {
+    width: 100%;
+    background-color: #A0C1D1;
+    padding: 1px;
+}
+
+.weather {
+    width: 100%;
+    background-color: #10104b;
+    padding: 1px;
+}
+
+.content {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#weather-icon{
+    max-width: 150px;
+    width: 100%;
+    object-fit: cover;
+}

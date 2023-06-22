@@ -5,14 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather API</title>
     <script defer src="scripts/weatherapi.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>OpenWeatherMap.org API Test</h1>
-    <p>The current temperature in Fairbanks, Alaska is <span id="current-temp"></span> &deg;F</p>
-    <h2>Current Condition Icon</h2>
-    <figure>
-      <img src="" alt="" id="weather-icon" />
-      <figcaption></figcaption>
-    </figure>
+  <div class="content">
+    <div class="title">
+      <h1>OpenWeatherMap.org API Test</h1>
+    </div>
+    <div class="weather">
+      <div class="bg">
+        <p>The current temperature in Merida, Venezuela is <span id="current-temp-f"></span> &deg;F or <span id="current-temp-c"></span> &deg;C</p>
+        <h2>Current Condition Icon</h2>
+        <figure>
+          <img src="" alt="" id="weather-icon" />
+          <figcaption></figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="footer">
+      <p> Gerardo A. Rosetti .:|:. Merida, Venezuela .:|:. <a href="https://openweathermap.org/">OpenWeatherMap</a></p>
+    </div>
+  </div>
 </body>
 </html>
