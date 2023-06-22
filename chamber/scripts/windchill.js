@@ -27,9 +27,13 @@ async function getWeather()
 	document.getElementById('wind-chill').innerText = 'Wind Chill: ' + chill + '°C / ' + chill2 + ' °F';
 	let t = temp2; // this is the current temperature in farenheit
 	let s = speed2; // this is the current wind speed in miles per hour
-	let f = 35.74 + 0.6215*t - 35.75*Math.pow(s, 0.16) + 0.4275*t*Math.pow(s, 0.16); // this is our function to express the wind chill in farenheit
-	let c = ((f - 32) * 5/9); // its value in celsius
-	document.getElementById('wind-chill').innerText = 'Wind Chill: ' + Math.round((c + Number.EPSILON) * 100) / 100 + '°C / ' + Math.round((f + Number.EPSILON) * 100) / 100 + ' °F';
+	if (temp2 < 50 && speed2 > 3.0) {
+		let f = 35.74 + 0.6215*t - 35.75*Math.pow(s, 0.16) + 0.4275*t*Math.pow(s, 0.16); // this is our function to express the wind chill in farenheit
+		let c = ((f - 32) * 5/9); // its value in celsius
+		document.getElementById('wind-chill').innerText = 'Wind Chill: ' + Math.round((c + Number.EPSILON) * 100) / 100 + '°C / ' + Math.round((f + Number.EPSILON) * 100) / 100 + ' °F';
+    } else {
+        document.getElementById('wind-chill').innerText = 'Wind Chill: N/A';
+    };
 }
 
 getWeather()
