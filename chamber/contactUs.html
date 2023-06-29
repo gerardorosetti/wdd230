@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assignment Chmbaer of Commerce for Gerardo Rosetti in WDD 230: Web Frontend Development at Brigham Young University - Idaho">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script defer src="scripts/lazyload.js"></script>
+    <title>Merida's Chamber of Commerce</title>
+</head>
+<body>
+    <div class="content">
+        <div class="contact"></div>
+        <header>
+            <div class="banner" id="banner">
+                <h2>
+                    🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.
+                </h2>
+            </div>
+            <div class="img-title">
+                <img src="images/logo.webp" alt="logo">
+                    <h1>Merida, Chamber of Commerce</h1>
+            </div>
+            <div class="links">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.png" alt="fb icon">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+            <div class="h3-bg"><h3 class="fill"></h3></div>
+            <h3 class="date-header"></h3>
+            <nav class="first-nav">
+                <ul class="navigation">
+                    <li><a href="#" onclick="togglemenu()">&#9776;</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <hr>
+            <div class="contactUs">
+                <br>
+                <div class="form-map">
+                    <form action="index.html" method="get">
+                        <fieldset class="contact-inf">
+                            <legend>Contact Form</legend>
+                            <!-- Name -->
+                            <p>
+                                <label>
+                                    Name:
+                                    <input type="text" name="name" pattern="[A-Za-z\- ]+" minlength="7" required>
+                                </label>
+                            </p>
+                            <!-- Email -->
+                            <p>
+                                <label>
+                                    Email Address:
+                                    <input type="email" name="email" placeholder="example@mail.com" required>
+                                </label>
+                            </p>
+                            <!-- Question/Concern -->
+                            <p>
+                                <label>Question/Concern</label>
+                                <textarea name="question" rows="5" required></textarea>
+                            </p>
+                        </fieldset>
+                        <!-- Hidden Date -->
+                        <label>
+                            <input type="hidden" id="hidden-date" name="date" value="DATE" >
+                        </label>
+                        <!-- Submit -->
+                        <p>
+                            <label>
+                                <input type="submit">
+                            </label>
+                        </p>
+                        <br>
+                    </form>
+                    <div class="map">
+                        <div class="gmap">
+                            <!-- <iframe width="820" height="560" id="gmap" -->
+                            <iframe id="gmap"
+                                src="https://maps.google.com/maps?q=HQ7W%2B5R7%2C+M%C3%A9rida+5115%2C+M%C3%A9rida&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                            </iframe>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="information">
+                    <h1>Contact Us</h1>
+                    <h2>Address</h2>
+                    <h4>HQ7W+5R7, Mérida 5115, Mérida</h4>
+                    <h4>Merida 5115, Mérida, Venezuela</h4>
+                    <h2>Phone</h2>
+                    <h4>0274-2713855</h4>
+                    <h2>Email</h2>
+                    <h4><a href="">meridachamberofcommerce@mail.com</a></h4>
+                </div>
+                <br>
+            </div>
+            <hr>
+        </main>
+        <footer>
+            <p>&copy;<span class="footer-year">year</span>  .:|:. Gerardo A. Rosetti .:|:. Venezuela</p>
+            <p class="last-updated">Last Updated</p>
+        </footer>
+    </div>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

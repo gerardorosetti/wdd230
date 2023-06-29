@@ -237,4 +237,56 @@
 
     /* END DIRECTORY */
 
+
+
+    .contactUs .form-map{
+      max-width: 40em;
+    }
+
+    /* .contactUs .bg{
+      height: 100%;
+      width: 75%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 15%;
+    } */
+
+    main:has(.contactUs) {
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: repeat(3,auto);
+    }
+    main:has(.contactUs) hr{
+      width: 99.4%;
+      grid-column: 1/3;
+      /* width: 96em; */
+    }
+
+    .contactUs{
+      grid-column: 1/3;
+    }
+
+    .contactUs .information{
+      background-color: white;
+      margin: 5%;
+      width: 100%;
+    }
+
+    .content:has(.contact){
+      width: 100%;
+    }
+    /* START CONTACT US */
+    /* .contactUs{
+      grid-column: 1/5;
+      display: grid;
+      place-items: center;
+      grid-template-columns: 1fr,1fr;
+      width: 100%;
+    }
+    .contactUs hr{
+      display: block;
+      width: 95%;
+    } */
+    /* END CONTACT US */
+
 }

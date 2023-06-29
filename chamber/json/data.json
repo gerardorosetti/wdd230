@@ -5,7 +5,7 @@
         "address": "Los Proceres Avenue, C.C. Los Geranios",
         "phone": "0500-4683700",
         "website": "https://www.inter.com.ve/",
-        "level": ["Television","Satellite","Internet","Telephony"],
+        "level": "Gold",
         "imageurl": "images/directory/inter.jpg"
       },
       {
@@ -13,7 +13,7 @@
         "address": "Local 58, C.C. Alto Prado, Av. Los Proceres",
         "phone": "0412-0921651",
         "website": "https://www.vnet.com.ve/",
-        "level": ["Television","Internet"],
+        "level": "Bronze",
         "imageurl": "images/directory/vnet.jpg"
       },
       {
@@ -21,7 +21,7 @@
         "address": "Los Proceres Avenue",
         "phone": "0274-4107500",
         "website": "https://materialeslosandes.com/",
-        "level": ["Agricultural and Livestock","Hardware","Construction","Iron and Steel","Home"],
+        "level": "Non-Profit",
         "imageurl": "images/directory/materiales-andes.jpg"
       },
       {
@@ -29,7 +29,7 @@
         "address": "Las Americas Avenue",
         "phone": "0274-2667128",
         "website": "https://www.supergarzon.com/",
-        "level": ["Home","Food"],
+        "level": "Bronze",
         "imageurl": "images/directory/garzon.jpg"
       },
       {
@@ -37,7 +37,7 @@
         "address": "Los Proceres Avenue",
         "phone": "0412-9527251",
         "website": "https://www.traki.com/",
-        "level": ["Male","Female","Kids"],
+        "level": "Silver",
         "imageurl": "images/directory/traki.jpg"
       },
       {
@@ -45,7 +45,7 @@
         "address": "Pan-American Highway, Ponds 5136, Merida",
         "phone": "0274-4162246",
         "website": "https://www.vegasol.com/",
-        "level": ["Member","Pro-Member","Guest"],
+        "level": "Silver",
         "imageurl": "images/directory/vegasol.jpg"
       },
       {
@@ -53,7 +53,7 @@
         "address": "Los Proceres Avenue, C.C. Alto Prado",
         "phone": "0274-2448866",
         "website": "https://www.cinex.com.ve/",
-        "level": ["Normal","3D"],
+        "level": "Silver",
         "imageurl": "images/directory/cinex.jpg"
       },
       {
@@ -61,7 +61,7 @@
         "address": "Los Proceres Avenue",
         "phone": "0274-2667447",
         "website": "https://www.hotelelserrano.com/es",
-        "level": ["Simple","Double","Family","Premiun"],
+        "level": "Bronze",
         "imageurl": "images/directory/hotel-serrano.jpg"
       },
       {
@@ -69,7 +69,7 @@
         "address": "13 street, between Rodríguez Picón and Av.2 Lora Sector Milla Central",
         "phone": "0274-2510076",
         "website": "http://www.librumweb.com/pizzeria/",
-        "level": ["Pizza","Calzone","Simple","Family"],
+        "level": "Gold",
         "imageurl": "images/directory/quesos.jpg"
       }
     ]
