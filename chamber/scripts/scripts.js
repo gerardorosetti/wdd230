@@ -86,3 +86,69 @@ if (hidden_date)
 	hidden_date.value = currentDate
 	// console.log(hidden_date.value)
 }
+
+/* Using the memership level */
+
+const spotlightsUrl = 'json/data.json';
+
+let spot1 = document.getElementsByClassName("spotlight1");
+let spot2 = document.getElementsByClassName("spotlight2");
+let spot3 = document.getElementsByClassName("spotlight3");
+
+const displaySpotlights= (companies) => {
+
+	const members = [];
+	for (let i =0; i < 9; i++)
+	{
+		if (companies[i]['level'] == 'Silver' || companies[i]['level'] == 'Gold')
+			members.push(companies[i]);
+	}
+
+	let random = Math.floor(Math.random() * members.length);
+	spot1[0].querySelector('h1').innerText = members[random]['name'];
+	spot1[0].querySelector('a').href = members[random]['website'];
+	spot1[0].querySelector('img').src = members[random]['imageurl'];
+	spot1[0].querySelector('h3').innerText = `Membership Level: ${members[random]['level']}`;
+	let link = document.createElement('a');
+	link.href = members[random]['website'];
+	link.innerText = "Website Link (Click on me)";
+	spot1[0].querySelectorAll('p')[0].innerText = "";
+	spot1[0].querySelectorAll('p')[0].appendChild(link);
+	spot1[0].querySelectorAll('p')[1].innerText = `Phone: ${members[random]['phone']}`
+	members.splice(random,1);
+
+	random = Math.floor(Math.random() * members.length);
+	spot2[0].querySelector('h1').innerText = members[random]['name'];
+	spot2[0].querySelector('a').href = members[random]['website'];
+	spot2[0].querySelector('img').src = members[random]['imageurl'];
+	spot2[0].querySelector('h3').innerText = `Membership Level: ${members[random]['level']}`;
+	link = document.createElement('a');
+	link.href = members[random]['website'];
+	link.innerText = "Website Link (Click on me)";
+	spot2[0].querySelectorAll('p')[0].innerText = "";
+	spot2[0].querySelectorAll('p')[0].appendChild(link);
+	spot2[0].querySelectorAll('p')[1].innerText = `Phone: ${members[random]['phone']}`
+	members.splice(random,1);
+
+	random = Math.floor(Math.random() * members.length);
+	spot3[0].querySelector('h1').innerText = members[random]['name'];
+	spot3[0].querySelector('a').href = members[random]['website'];
+	spot3[0].querySelector('img').src = members[random]['imageurl'];
+	spot3[0].querySelector('h3').innerText = `Membership Level: ${members[random]['level']}`;
+	link = document.createElement('a');
+	link.href = members[random]['website'];
+	link.innerText = "Website Link (Click on me)";
+	spot3[0].querySelectorAll('p')[0].innerText = "";
+	spot3[0].querySelectorAll('p')[0].appendChild(link);
+	spot3[0].querySelectorAll('p')[1].innerText = `Phone: ${members[random]['phone']}`
+	members.splice(random,1);
+
+}
+
+async function getSpotlightsData() {
+    const response = await fetch(spotlightsUrl);
+    const data = await response.json();
+    displaySpotlights(data.companies);
+}
+
+getSpotlightsData();
