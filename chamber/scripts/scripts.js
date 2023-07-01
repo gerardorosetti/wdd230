@@ -110,6 +110,7 @@ const displaySpotlights= (companies) => {
 	spot1[0].querySelector('img').src = members[random]['imageurl'];
 	spot1[0].querySelector('h3').innerText = `Membership Level: ${members[random]['level']}`;
 	let link = document.createElement('a');
+	link.target = "_blank";
 	link.href = members[random]['website'];
 	link.innerText = "Website Link (Click on me)";
 	spot1[0].querySelectorAll('p')[0].innerText = "";
@@ -123,6 +124,7 @@ const displaySpotlights= (companies) => {
 	spot2[0].querySelector('img').src = members[random]['imageurl'];
 	spot2[0].querySelector('h3').innerText = `Membership Level: ${members[random]['level']}`;
 	link = document.createElement('a');
+	link.target = "_blank";
 	link.href = members[random]['website'];
 	link.innerText = "Website Link (Click on me)";
 	spot2[0].querySelectorAll('p')[0].innerText = "";
@@ -136,6 +138,7 @@ const displaySpotlights= (companies) => {
 	spot3[0].querySelector('img').src = members[random]['imageurl'];
 	spot3[0].querySelector('h3').innerText = `Membership Level: ${members[random]['level']}`;
 	link = document.createElement('a');
+	link.target = "_blank";
 	link.href = members[random]['website'];
 	link.innerText = "Website Link (Click on me)";
 	spot3[0].querySelectorAll('p')[0].innerText = "";

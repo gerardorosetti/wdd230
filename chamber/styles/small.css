@@ -385,9 +385,12 @@ footer {
 
 /* START JOIN AND THANK YOU */
 
+.join, .thankYou{
+  width: 95%;
+}
+
 .join form, .contactUs form{
     font: 1em sans-serif;
-    /* max-width: 25em; */
 }
 .join p > label, .contactUs p > label{
     display: block;
@@ -432,7 +435,7 @@ input[type="text"], input[type="email"], input[type="number"], textarea, fieldse
 }
 
 .join, .thankYou {
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -635,6 +638,12 @@ main:has(.contactUs){
 }
 #gmap{
   width: 100%;
+  transition: transform .3s;
+}
+
+#gmap:hover{
+  opacity: .6;
+  transform: scale(1.1);
 }
 
 main:has(.contactUs) hr{
@@ -668,3 +677,13 @@ main:has(.contactUs) hr{
 }
 
 /* END CONTACT US */
+
+/* EXTRA */
+
+.spotlight1 img, .spotlight2 img, .spotlight3 img{
+  transition: transform .3s;
+}
+
+.spotlight1 img:hover, .spotlight2 img:hover, .spotlight3 img:hover{
+  transform: scale(1.02);
+}
