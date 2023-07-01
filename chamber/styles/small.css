@@ -682,6 +682,7 @@ main:has(.contactUs) hr{
 
 .spotlight1 img, .spotlight2 img, .spotlight3 img{
   transition: transform .3s;
+  border-radius: 50px;
 }
 
 .spotlight1 img:hover, .spotlight2 img:hover, .spotlight3 img:hover{
