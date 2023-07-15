@@ -509,3 +509,11 @@ footer {
   opacity: .6;
   transform: scale(1.1);
 }
+
+main hr{
+  border: 2px solid #5B8C5A;
+}
+
+.weather hr{
+  border: 1px solid lightslategray;
+}
