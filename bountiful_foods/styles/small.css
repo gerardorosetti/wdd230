@@ -83,7 +83,7 @@ h1 {
 .img-title h1{
 
   font-family: 'Kablammo';
-  font-size: 45px;
+  font-size: 35px;
   grid-row: 1/2;
   align-self: center;
   grid-column: 2/3;
@@ -100,7 +100,7 @@ header nav a{
   text-align: center;
   color: white;
   text-decoration: none;
-  padding: 35px;
+  padding: 40px;
   font-size: 24px;
   transition: transform .3s;
 }
