@@ -2,7 +2,8 @@
 
 async function getWeather()
 {
-    let url = "https://api.weatherapi.com/v1/current.json?key=b86c967e8f1a4d6a8bd85728232205&q=Merida Venezuela&aqi=yes"
+    // let url = "https://api.weatherapi.com/v1/current.json?key=b86c967e8f1a4d6a8bd85728232205&q=Merida Venezuela&aqi=yes"
+	let url = "http://api.weatherapi.com/v1/current.json?key=b86c967e8f1a4d6a8bd85728232205&q=Carlsbad&aqi=yes"
 
     let res = await fetch(url);
     let weather = await res.json();

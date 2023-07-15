@@ -1,0 +1,511 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Ubuntu:ital@1&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Kablammo&family=Roboto+Mono&family=Ubuntu:ital@1&display=swap');
+
+h1, h2, h3, h4, h5, h6, .title-link {
+  font-family: 'Ubuntu', serif, sans-serif;
+}
+
+p , li{
+  font-family: 'Roboto Mono', monospace, sans-serif;
+}
+.content {
+  display: grid;
+  place-items: center;
+  grid-template-rows: repeat(3,auto);
+}
+
+/*START HEADER*/
+
+header{
+  grid-row: 1/2;
+  text-align: center;
+  background-color: #10104b;
+  color: white;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(3,auto);
+  padding-top: 10px;
+}
+
+.banner {
+  grid-row: 1/2;
+  grid-column: 1/3;
+  text-align: center;
+  margin: 20px 0;
+  width: 80%;
+  place-self: center;
+  background-color: #A0C1D1;
+  color: #000;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.h3-bg {
+  grid-row: 3/4;
+  grid-column: 1/3;
+  background-color: #A0C1D1;
+  min-width: 90%;
+  border: 2px solid #000;
+  place-self: center;
+  opacity: .4;
+  z-index: 0;
+}
+
+.h3-bg .date-header {
+  margin: 0;
+}
+
+.date-header {
+  grid-row: 3/4;
+  grid-column: 1/3;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+
+.img-title {
+  width: 96%;
+  text-align: center;
+  grid-column: 1/3;
+  padding: 10px;
+  justify-content: center;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.img-title img{
+  grid-column: 1/2;
+  max-width: 100%;
+  align-self: center;
+}
+.img-title h1{
+
+  font-family: 'Kablammo';
+  font-size: 45px;
+  grid-row: 1/2;
+  align-self: center;
+  grid-column: 2/3;
+  max-width: 100%;
+}
+
+header nav {
+  grid-row: 2/3;
+  width: 100%;
+  background-color: #A0C1D1;
+}
+
+header nav a{
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  padding: 35px;
+  font-size: 24px;
+  transition: transform .3s;
+}
+
+header nav a:hover{
+  opacity: .6;
+  transform: scale(1.1);
+}
+
+/*END HEADER*/
+
+/* Hamburger Menu */
+.first-nav {
+  grid-row: 4/5;
+  grid-column: 1/3;
+  margin: 0 auto;
+}
+
+.navigation {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.navigation li {
+  display: none;
+}
+
+.navigation li:first-child{
+  display: block;
+}
+
+.navigation a {
+  display: block;
+  padding: 0.75rem;
+  text-decoration: none;
+  color: #000;
+}
+.responsive li {
+  display: block;
+}
+
+/* End Hamburger Menu */
+
+main {
+  grid-row: 2/3;
+  text-align: center;
+  margin: 15px;
+}
+
+main hr {
+  width: 100%;
+}
+
+
+.drink-mix {
+  /* max-width: 42.5em; */
+  grid-row: 1/2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drink-mix img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-drink-mix h1 {
+  /* position: absolute;
+  top: 1.2em;
+  left: 0.1em; */
+  /* position: relative; */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 12%;
+  margin: 0 auto;
+  font-size: 2em;
+  color: white;
+  text-shadow: 3px 3px 3px red;
+}
+
+.text-drink-mix button a {
+  text-decoration: none;
+
+}
+
+.text-drink-mix button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25%;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: greenyellow;
+  /* text-decoration: none; */
+  width: 10em;
+  height: 2.5em;
+  font-size: 1.3em;
+  color: white;
+  /* text-shadow: 2px 2px 2px black; */
+}
+.information h3 {
+  font-weight: bolder;
+  font-size: 1.3em;
+}
+
+.information p {
+  padding: 2%;
+  padding-top: 0;
+}
+
+
+.information {
+  background-color: #A0C1D1;
+  display: flex;
+  flex-direction: column;
+}
+
+.information p, .information span {
+  font-size: 1.15em;
+}
+
+.information p {
+  padding: 0 5%;
+}
+
+.information span {
+  align-self: center;
+  padding-bottom: 20px;
+  color: #10104b;
+}
+
+.weather h1, .drinks h1, .spotlight1 h1, .spotlight2 h1, .spotlight3 h1, .information h1  {
+  place-self: center;
+  font-size: 2em;
+  margin: 0;
+  color: #10104b;
+  text-shadow: 2px 2px 2px white;
+}
+
+.weather {
+  display: grid;
+  /* grid-template-columns: repeat(2,auto); */
+  grid-template-columns: 40% 60%;
+  grid-template-rows: repeat(6,auto);
+  background-color: #A0C1D1;
+  font-size: 1.5em;
+  margin: 0 auto;
+  width: 80%;
+  /* padding-right: 5%; */
+}
+
+.weather h1 {
+  grid-row: 1/2;
+  grid-column: 1/3;
+}
+
+#condition-img {
+  place-self: center;
+  grid-row: 2/5;
+  grid-column: 1/2;
+  width: 150px;
+  margin: 0;
+}
+
+#temperature {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  margin: 5% 0;
+}
+
+#condition-text{
+  grid-row: 3/4;
+  grid-column: 2/3;
+  margin: 0;
+}
+
+.weather hr {
+  grid-column: 1/3;
+  grid-row: 5/6;
+  margin: 0;
+  width: 85%;
+  place-self: center;
+}
+
+#humidity{
+  grid-row: 4/5;
+  grid-column: 2/3;
+  /* margin: 2% 0; */
+  margin: 5% 0;
+  /* padding-right: 2%; */
+}
+
+#wind-chill{
+  grid-row: 6/7;
+  grid-column: 1/3;
+  margin: 2% 0;
+}
+
+
+/* #wind-speed{
+  grid-row: 5/6;
+  grid-column: 1/3;
+  margin: 2% 0;
+}
+
+#wind-chill{
+  grid-row: 6/7;
+  grid-column: 1/3;
+  margin: 2% 0;
+} */
+
+.drinks {
+  background-color: #A0C1D1;
+  padding: 2%;
+}
+
+.spotlights {
+  background-color: #A0C1D1;
+  display: grid;
+  grid-template-rows: repeat(3,auto);
+}
+
+.spotlight1, .spotlight2, .spotlight3 {
+  width: 80%;
+  margin: 2% 0;
+  place-self: center;
+  background-color:#5B8C5A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spotlight1 img, .spotlight2 img, .spotlight3 img {
+    max-width: 100%;
+    max-height: 150px;
+}
+
+.spotlight1 h3, .spotlight2 h3, .spotlight3 h3 {
+    margin: 0 auto;
+}
+
+.spotlight1 p, .spotlight2 p, .spotlight3 p {
+    margin: 5px 10px;
+}
+.spotlight1 p:last-child, .spotlight2 p:last-child, .spotlight3 p:last-child {
+    padding-bottom: 10px;
+}
+
+.spotlight1 hr, .spotlight2 hr, .spotlight3 hr {
+    width: 85%;
+}
+
+/* FOOTER */
+
+footer {
+    grid-row: 3/4;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5%;
+    text-align: center;
+    background-color: #10104b;
+    color: white;
+}
+
+.links {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 15%;
+}
+
+.links img{
+    max-width: 100%;
+}
+
+/* EXTRA */
+
+.spotlight1 img, .spotlight2 img, .spotlight3 img{
+  transition: transform .3s;
+  border-radius: 50px;
+}
+
+.spotlight1 img:hover, .spotlight2 img:hover, .spotlight3 img:hover{
+  transform: scale(1.02);
+}
+
+/* TESTING */
+
+.forecast{
+  /* display: flex;
+  justify-content: space-around; */
+  display: grid;
+  grid-template-columns: 10% 40% 40% 10%;
+  grid-row: 6/7;
+  grid-column: 1/3;
+  width: 100%;
+  place-items: center;
+}
+
+.forecast-box{
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+  /* background: rgba(0, 0, 0, .5); */
+  transition: transform 0.3s ease-in-out;
+  /* width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* transform: scale(0); */
+}
+
+.forecast-box {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  /* border: 2px dashed black ; */
+  /* padding: 0; */
+}
+
+.forecast-box h4:first-child, .forecast-box p{
+  margin-bottom: 0;
+}
+.forecast-box h4:last-child{
+  margin-top: 0;
+}
+
+.forecast-box img{
+  width: 100%;
+  /* width: 75vw; */
+  /* height: auto; */
+  /* max-height: 95vh; */
+}
+
+/* .light-box:target{
+  transform: scale(1);
+} */
+
+.next{
+  display: block;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  background: none;
+  transition: transform .5s;
+}
+
+.next:hover{
+  transform: scale(1.5);
+}
+
+.next:last-child{
+  /* margin-right: 15px; */
+  margin-right: 30%;
+}
+
+.no-display{
+  /* display: none; */
+  visibility: hidden;
+}
+
+.not-small{
+  display: none;
+}
+
+
+
+.footer-navigation {
+  width: 100%;
+}
+
+.footer-navigation ul{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.footer-navigation ul li{
+  text-align: center;
+  padding: 35px;
+  font-size: 24px;
+  transition: transform .5s;
+}
+
+.footer-navigation ul li a{
+  color: white;
+  text-decoration: none;
+}
+
+.footer-navigation ul li:hover{
+  opacity: .6;
+  transform: scale(1.1);
+}
