@@ -5,6 +5,7 @@
     }
     .content {
         max-width: 97.5em;
+        width: 100%;
     }
     h1 {
         font-size: 36px;
@@ -59,4 +60,10 @@
     .drinks h1{
         align-self: center;
     }
+
+    /* START FRESH */
+    .check-box {
+        grid-template-columns: repeat(6,1fr);
+    }
+    /* END FRESH */
 }

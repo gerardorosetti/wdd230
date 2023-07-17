@@ -112,4 +112,10 @@
     .next:last-child{
         margin-right: 65%;
     }
+
+    /* START FRESH */
+    .check-box {
+        grid-template-columns: repeat(4,1fr);
+    }
+    /* END FRESH */
 }
