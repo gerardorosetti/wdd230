@@ -11,9 +11,7 @@ function  displayResults(fruitData) {
     more_data = fruitData;
     for (let index = 0; index < 3; index++) {
         selectedTag = selects[index];
-        // console.log(selectedTag)
         fruitData.forEach(fruit => {
-            // more_data.push(fruit);
             const opt = document.createElement("option");
             opt.value = fruit['name'];
             opt.innerText = fruit['name'];
@@ -29,30 +27,7 @@ function  displayResults(fruitData) {
     label.innerHTML = 'Give us your special instructions if needed:';
     label.appendChild(textarea);
     fieldset.appendChild(label);
-    console.log(more_data);
 }
-
-// submitBtn.addEventListener("click", (event) =>
-// {
-//     if (!localStorage.getItem("drinks")) {
-//         localStorage.setItem("drinks", 0);
-//     }
-//     let current_drinks = parseInt(localStorage.getItem("drinks"));
-//     current_drinks += 1;
-//     localStorage.setItem("drinks",current_drinks);
-//     const light_box = document.createElement('div');
-//     light_box.setAttribute('class','.light-box');
-//     const name_input = document.getElementById("name-input");
-//     const mail_input = document.getElementById("mail-input");
-//     const phone_input = document.getElementById("phone-input");
-//     const textarea_input = document.getElementById("textarea-input");
-//     const name = document.createElement("h1");
-//     name.innerText = name_input.value;
-//     light_box.appendChild(name);
-
-//     const fresh = document.getElementsByClassName("fresh")[0];
-//     fresh.appendChild(light_box);
-// });
 
 function summary (event)
 {
@@ -88,28 +63,9 @@ function summary (event)
     const content_box = document.createElement('div');
     content_box.setAttribute("class","content-box");
 
-    // light_box.appendChild(name);
-    // light_box.appendChild(email);
-    // light_box.appendChild(phone);
-    // light_box.appendChild(fruits[0]);
-    // light_box.appendChild(fruits[1]);
-    // light_box.appendChild(fruits[2]);
-    // if (instructions.innerText.length > 0)
-    // {
-    //     const temp = instructions.innerText;
-    //     instructions.innerText = `Special Instructions: ${temp}`;
-    //     light_box.appendChild(instructions);
-    // }
-
     const div_client = document.createElement("div");
     div_client.setAttribute("class","div-client");
 
-    // content_box.appendChild(name);
-    // content_box.appendChild(email);
-    // content_box.appendChild(phone);
-    // content_box.appendChild(fruits[0]);
-    // content_box.appendChild(fruits[1]);
-    // content_box.appendChild(fruits[2]);
     div_client.appendChild(name);
     div_client.appendChild(email);
     div_client.appendChild(phone);
@@ -197,7 +153,6 @@ function summary (event)
 form.addEventListener('submit', summary);
 
 // function  displayResults(fruitData) {
-//     // console.log(fruitData);
 //     let i = 0;
 //     fruitData.forEach(fruit => {
 //         const label = document.createElement("label");
@@ -213,7 +168,6 @@ form.addEventListener('submit', summary);
 //                     cont++;
 //                 }
 //             });
-//             // console.log(i);
 //             if (cont > 3){
 //                 event['target'].checked = false;
 //             }
