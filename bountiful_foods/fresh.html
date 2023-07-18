@@ -34,7 +34,9 @@
         <main>
             <div class="fresh">
                 <hr>
-                <form action="index.html" method="get">
+                <!-- <form action="index.html" method="get"> -->
+                <!-- <form onsubmit="summary()"> -->
+                <form class="fresh-form">
                     <br>
                     <fieldset class="personal-inf">
                         <legend>Personal Information</legend>
@@ -42,21 +44,21 @@
                         <p>
                             <label>
                                 What is your first name?
-                                <input type="text" name="firstName" required>
+                                <input type="text" name="firstName" id="name-input" required>
                             </label>
                         </p>
                         <!-- Email -->
                         <p>
                             <label>
                                 What's your email address?
-                                <input type="email" name="email" placeholder="example@mail.com" required>
+                                <input type="email" name="email" placeholder="example@mail.com" id="mail-input" required>
                             </label>
                         </p>
                         <!-- Phone -->
                         <p>
                             <label>
                                 What is your cell phone number?
-                                <input type="tel" name="phone" required pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="123-45-678" required>
+                                <input type="tel" name="phone" required pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="123-45-678" id="phone-input" required>
                             </label>
                         </p>
                     </fieldset>
@@ -65,8 +67,10 @@
                     <fieldset class="drink-mix-inf">
                         <legend>Fruit Drink Mix</legend>
                         <!-- Business Description -->
-                        <div class="check-box">
-
+                        <div class="select-options">
+                            <select name="fruit-1" required></select>
+                            <select name="fruit-2" required></select>
+                            <select name="fruit-3" required></select>
                         </div>
                     </fieldset>
 
@@ -78,7 +82,7 @@
                     <!-- Submit -->
                     <p>
                         <label>
-                            <input type="submit">
+                            <input type="submit" class="submit-btn">
                         </label>
                     </p>
                     <br>

@@ -62,8 +62,20 @@
     }
 
     /* START FRESH */
-    .check-box {
-        grid-template-columns: repeat(6,1fr);
+    .select-options {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .select-options select:last-child{
+        grid-column: auto;
+        width: 100%;
+    }
+    .content-box {
+        width: 50%;
+        height: 60%;
+        display: grid;
+        place-items: center;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 50% 1fr;
     }
     /* END FRESH */
 }
