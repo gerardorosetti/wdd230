@@ -131,7 +131,7 @@ function summary (event)
     const div_order = document.createElement("div");
     div_order.setAttribute("class","div-order");
 
-    const order_date = document.createElement('h3');
+    const order_date = document.createElement('h1');
     order_date.setAttribute("class","order-date");
     order_date.innerText = `${dayName}, ${currentDate.getDate()} ${monthName} ${currentYear}`;
     div_order.appendChild(order_date);

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assignment Bountiful Foods (Final Project) for Gerardo Rosetti in WDD 230: Web Frontend Development at Brigham Young University - Idaho">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script defer src="scripts/date_menu.js"></script>
+    <title>Bountiful Foods</title>
+</head>
+<body>
+    <div class="content">
+        <header>
+            <div class="img-title">
+                <img src="images/logo.webp" alt="logo">
+                <h1>Bountiful Foods</h1>
+            </div>
+            <div class="h3-bg"><h3 class="fill"></h3></div>
+            <h3 class="date-header"></h3>
+            <nav class="first-nav">
+                <ul class="navigation">
+                    <li><a href="#" onclick="togglemenu()">&#9776;</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fresh.html">Fresh</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <hr>
+            <div class="aboutUs">
+                <br>
+                <div class="about">
+                    <h1>We are Bountiful Foods</h1>
+                    <p>We are a small business specializied in organic, locally grown foods. 
+                        We are physically located in Carlsbad, California, but do not worry, we have many food trucks that cover the coastal area from Los Angeles to San Diego. 
+                        The fruits we sell are produce directly from the farmers in the area, but also uses some national and international suppliers. 
+                        You can get our products and make your order using your phone, laptop or desktop using our website. 
+                        Our main mission is to provide fresh and healthy food options, including organic, made to order, 
+                        fruit drinks and fruit bags, to the local population and to tourists visiting the coastal areas. 
+                        And finally our theme is to support healthy eating, organic bounty, and convenience</p>
+                </div>
+                <div class="information">
+                    <h1>About Us</h1>
+                    <h2>Address:</h2>
+                    <h4>Carlsbad, California</h4>
+                    <h2>Phone:</h2>
+                    <h4>0274-2713855</h4>
+                    <h2>Email:</h2>
+                    <h4>bountifulfoods@mail.com</h4>
+                </div>
+                <div class="form-map">
+                    <form action="index.html" method="get">
+                        <fieldset class="about-inf">
+                            <legend>Contact Form</legend>
+                            <!-- Name -->
+                            <p>
+                                <label>
+                                    Name:
+                                    <input type="text" name="name" pattern="[A-Za-z\- ]+" minlength="7" required>
+                                </label>
+                            </p>
+                            <!-- Email -->
+                            <p>
+                                <label>
+                                    Email Address:
+                                    <input type="email" name="email" placeholder="example@mail.com" required>
+                                </label>
+                            </p>
+                            <!-- Question/Concern -->
+                            <p>
+                                <label>Question/Concern:</label>
+                                <br>
+                                <textarea name="question" rows="5" required></textarea>
+                            </p>
+                        </fieldset>
+                        <!-- Hidden Date -->
+                        <label>
+                            <input type="hidden" id="hidden-date" name="date" value="DATE" >
+                        </label>
+                        <!-- Submit -->
+                        <p>
+                            <label>
+                                <input type="submit">
+                            </label>
+                        </p>
+                        <br>
+                    </form>
+                    <div class="map">
+                        <div class="gmap">
+                            <a href="https://goo.gl/maps/fozeiwXbm7vaYRCy5" target="_blank">
+                                <img src="images/carlsbad_map.png" id="gmap" alt="carlsbad map example">
+                            </a>
+                            <br>
+                        </div>
+                    </div>
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11235.182476974023!2d-117.3509526171292!3d33.15533254477529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc73453f3bee59%3A0xa4cb5592fcf65d2f!2sCarlsbad%2C%20California%2C%20EE.%20UU.!5e0!3m2!1ses!2sve!4v1689701290250!5m2!1ses!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                </div>
+
+                <br>
+            </div>
+            <hr>
+        </main>
+        <footer>
+            <p class="last-updated">Last Updated</p>
+            <nav  class="footer-navigation not-small">
+                <ul>
+                    <li><a href="fresh.html">Fresh</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.png" alt="fb icon">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
