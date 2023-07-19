@@ -5,7 +5,14 @@ const daynumber = {
 	Wednesday: 4,
 	Thursday: 5,
 	Friday: 6,
-	Saturday: 7
+	Saturday: 7,
+    domingo: 1,
+    lunes: 2,
+    martes: 3,
+    miércoles: 4,
+    jueves: 5,
+    viernes: 6,
+    sábado: 7
 };
 
 const currentTempC = document.querySelector('#temperature');
@@ -103,8 +110,10 @@ function  displayResults2(weatherData) {
             repair[2] = -7;
         }
 
+        // console.log(item.day,daynumber[item.day]);
         if (daynumber[item.day] == daynumber[dayName] + 1 - repair[0])
         {
+            // console.log('here');
             day1.push(item);
         }
         else if (daynumber[item.day] == daynumber[dayName] + 2 - repair[1])
@@ -119,6 +128,8 @@ function  displayResults2(weatherData) {
     dayList.push(day1);
     dayList.push(day2);
     dayList.push(day3);
+
+    // console.log(day1);
 
     forecastList[0].querySelector(".time").textContent = `${day1[0]['day']} at ${day1[0]['time']}`;
     forecastList[0].querySelector("p").textContent = day1[0]['description'];
