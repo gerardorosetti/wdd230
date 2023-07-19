@@ -101,26 +101,24 @@ function  displayResults2(weatherData) {
         {
             repair[0] = -7;
         }
-        else if (daynumber[dayName] + 2 > 7)
+        if (daynumber[dayName] + 2 > 7)
         {
             repair[1] = -7;
         }
-        else if (daynumber[dayName] + 3 > 7)
+        if (daynumber[dayName] + 3 > 7)
         {
             repair[2] = -7;
         }
 
-        // console.log(item.day,daynumber[item.day]);
-        if (daynumber[item.day] == daynumber[dayName] + 1 - repair[0])
+        if (daynumber[item.day] == daynumber[dayName] + 1 + repair[0])
         {
-            // console.log('here');
             day1.push(item);
         }
-        else if (daynumber[item.day] == daynumber[dayName] + 2 - repair[1])
+        if (daynumber[item.day] == daynumber[dayName] + 2 + repair[1])
         {
             day2.push(item);
         }
-        else if (daynumber[item.day] == daynumber[dayName] + 3 - repair[2])
+        if (daynumber[item.day] == daynumber[dayName] + 3 + repair[2])
         {
             day3.push(item);
         }
@@ -136,21 +134,15 @@ function  displayResults2(weatherData) {
     forecastList[0].querySelector("img").src = day1[0]['image'];
     forecastList[0].querySelector(".temp").textContent = day1[0]['temperature'];
 
-    console.log(day1);
-
     forecastList[1].querySelector(".time").textContent = `${day2[0]['day']} at ${day2[0]['time']}`;
     forecastList[1].querySelector("p").textContent = day2[0]['description'];
     forecastList[1].querySelector("img").src = day2[0]['image'];
     forecastList[1].querySelector(".temp").textContent = day2[0]['temperature'];
 
-    console.log(day2);
-
     forecastList[2].querySelector(".time").textContent = `${day3[0]['day']} at ${day3[0]['time']}`;
     forecastList[2].querySelector("p").textContent = day3[0]['description'];
     forecastList[2].querySelector("img").src = day3[0]['image'];
     forecastList[2].querySelector(".temp").textContent = day3[0]['temperature'];
-
-    console.log(day3);
 
     leftArrow.forEach(left => {
         left.setAttribute('class','no-display');

@@ -12,6 +12,7 @@
     <script defer src="scripts/date_menu.js"></script>
     <script defer src="scripts/weather.js"></script>
     <script defer src="scripts/drinks.js"></script>
+    <script defer src="scripts/lazyload.js"></script>
     <title>Bountiful Foods</title>
 </head>
 <body>
@@ -36,7 +37,8 @@
             <div class="drink-mix">
                 <picture>
                     <source media="(max-width: 42.5em)" srcset="images/drink-mix-small.png">
-                    <img src="images/drink-mix-medium-large.png" alt="drink-mix" loading="lazy">
+                    <!-- <img src="images/drink-mix-medium-large.png" data-src="images/drink-mix-medium-large.png" alt="drink-mix" loading="lazy"> -->
+                    <img src="images/placeholder.jpg" data-src="images/drink-mix-medium-large.png" alt="drink-mix" loading="lazy">
                 </picture>
                 <div class="text-drink-mix">
                     <h1>
@@ -83,7 +85,7 @@
                         <div class="forecast-box">
                             <h4 class="time">sample p.m</h4>
                             <p>Description</p>
-                            <img src="images/clouds_small.png" alt="forecast 2" loading="lazy">
+                            <img src="images/clouds_small.png" alt="forecast 3" loading="lazy">
                             <h4 class="temp">30C / 20F</h4>
                         </div>
                         <button class="next right">→</button>
