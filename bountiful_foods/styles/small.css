@@ -675,6 +675,14 @@ main:has(.aboutUs) hr{
   margin-bottom: 5%;
 }
 
+.aboutUs.information h4:last-child{
+  overflow-x: scroll;
+}
+
+.aboutUs.information h4:last-child::-webkit-scrollbar{
+  display: none;
+}
+
 .aboutUs .information h4{
   text-align: left;
 }
