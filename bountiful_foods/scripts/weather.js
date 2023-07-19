@@ -1,3 +1,13 @@
+const daynumber = {
+	Sunday: 1,
+	Monday: 2,
+	Tuesday: 3,
+	Wednesday: 4,
+	Thursday: 5,
+	Friday: 6,
+	Saturday: 7
+};
+
 const currentTempC = document.querySelector('#temperature');
 const weatherIcon = document.querySelector('#condition-img');
 const captionDesc = document.querySelector('#condition-text');
@@ -6,16 +16,23 @@ const humidity = document.querySelector('#humidity');
 const forecastCont = document.querySelector('.forecast');
 const forecastList = document.querySelectorAll('.forecast-box');
 
-const dataList = [];
+const dayList = [];
+const day1 = [];
+const day2 = [];
+const day3 = [];
 
-let currentPage = 1;
-const rightArrow = document.querySelector('.right');
-const leftArrow = document.querySelector('.left');
+const currentPage = [1,1,1];
+const rightArrow = document.querySelectorAll('.right');
+const leftArrow = document.querySelectorAll('.left');
 
 const url = 'https://api.openweathermap.org/data/2.5/weather?q=Carlsbad,US&appid=c7a88691ff7f98908e15c855847369ba'
 const url2 = 'https://api.openweathermap.org/data/2.5/forecast?lat=33.1581&lon=-117.3506&appid=c7a88691ff7f98908e15c855847369ba'
 
 function  displayResults(weatherData) {
+    // const current_weather = document.getElementsByClassName('current-weather')[0];
+    // const cw = current_weather.textContent;
+    // console.log(weatherData)
+    // current_weather.textContent = `${cw}: (${dayName})`;
     // console.log(weatherData);
     const kelvin_temp = weatherData['main']['temp'];
     const f_temp = ((kelvin_temp - 273.15) * 9/5 + 32).toFixed(1);
@@ -55,6 +72,8 @@ function  displayResults2(weatherData) {
         date_time[0] = date_time[0].replaceAll('-','/');
         const day = new Date(date_time[0])
         item.day = day.toLocaleDateString("us-US", { weekday: 'long' });
+
+
         item.time = date_time[1].slice(0,-3);
         item.image = `https://openweathermap.org/img/wn/${element.weather[0].icon}@4x.png`;
         const kelvin_temp = element['main']['temp'];
@@ -68,63 +87,111 @@ function  displayResults2(weatherData) {
             condition_text = condition_text + e + " ";
         });
         item.description = condition_text;
-        dataList.push(item);
+
+        let repair = [0,0,0];
+
+        if (daynumber[dayName] + 1 > 7)
+        {
+            repair[0] = -7;
+        }
+        else if (daynumber[dayName] + 2 > 7)
+        {
+            repair[1] = -7;
+        }
+        else if (daynumber[dayName] + 3 > 7)
+        {
+            repair[2] = -7;
+        }
+
+        if (daynumber[item.day] == daynumber[dayName] + 1 - repair[0])
+        {
+            day1.push(item);
+        }
+        else if (daynumber[item.day] == daynumber[dayName] + 2 - repair[1])
+        {
+            day2.push(item);
+        }
+        else if (daynumber[item.day] == daynumber[dayName] + 3 - repair[2])
+        {
+            day3.push(item);
+        }
     });
-    for (let i = 0; i < 4; i++)
-    {
-        forecastList[i].querySelector(".time").textContent = `${dataList[i]['day']} at ${dataList[i]['time']}`;
-        forecastList[i].querySelector("p").textContent = dataList[i]['description'];
-        forecastList[i].querySelector("img").src = dataList[i]['image'];
-        forecastList[i].querySelector(".temp").textContent = dataList[i]['temperature'];
-    }
-    leftArrow.setAttribute('class','no-display');
+    dayList.push(day1);
+    dayList.push(day2);
+    dayList.push(day3);
+
+    forecastList[0].querySelector(".time").textContent = `${day1[0]['day']} at ${day1[0]['time']}`;
+    forecastList[0].querySelector("p").textContent = day1[0]['description'];
+    forecastList[0].querySelector("img").src = day1[0]['image'];
+    forecastList[0].querySelector(".temp").textContent = day1[0]['temperature'];
+
+    console.log(day1);
+
+    forecastList[1].querySelector(".time").textContent = `${day2[0]['day']} at ${day2[0]['time']}`;
+    forecastList[1].querySelector("p").textContent = day2[0]['description'];
+    forecastList[1].querySelector("img").src = day2[0]['image'];
+    forecastList[1].querySelector(".temp").textContent = day2[0]['temperature'];
+
+    console.log(day2);
+
+    forecastList[2].querySelector(".time").textContent = `${day3[0]['day']} at ${day3[0]['time']}`;
+    forecastList[2].querySelector("p").textContent = day3[0]['description'];
+    forecastList[2].querySelector("img").src = day3[0]['image'];
+    forecastList[2].querySelector(".temp").textContent = day3[0]['temperature'];
+
+    console.log(day3);
+
+    leftArrow.forEach(left => {
+        left.setAttribute('class','no-display');
+    });
 }
 
-rightArrow.addEventListener("click", (event) =>
-{
-    if (currentPage < 10)
+rightArrow.forEach(function(right,index) {
+    right.addEventListener("click", (event) =>
     {
-        for (let i = currentPage*4, j = 0; i < currentPage*4+4; i++,j++)
+        if (currentPage[index] < dayList[index].length)
         {
-            forecastList[j].querySelector(".time").textContent = `${dataList[i]['day']} at ${dataList[i]['time']}`;
-            forecastList[j].querySelector("p").textContent = dataList[i]['description'];
-            forecastList[j].querySelector("img").src = dataList[i]['image'];
-            forecastList[j].querySelector(".temp").textContent = dataList[i]['temperature'];
+            forecastList[index].querySelector(".time").textContent = `${dayList[index][currentPage[index]]['day']} at ${dayList[index][currentPage[index]]['time']}`;
+            forecastList[index].querySelector("p").textContent = dayList[index][currentPage[index]]['description'];
+            forecastList[index].querySelector("img").src = dayList[index][currentPage[index]]['image'];
+            forecastList[index].querySelector(".temp").textContent = dayList[index][currentPage[index]]['temperature'];
+            currentPage[index]++;
         }
-        currentPage++;
-    }
-    if (currentPage == 10)
-    {
-        rightArrow.setAttribute('class','no-display');
-    }
-    if (currentPage > 1)
-    {
-        leftArrow.setAttribute('class','next left');
-    }
+        if (currentPage[index] == dayList[index].length)
+        {
+            right.setAttribute('class','no-display');
+        }
+        if (currentPage[index] > 1)
+        {
+            leftArrow[index].setAttribute('class','next left');
+        }
+        // console.log(currentPage[index]);
+    });
 });
 
-leftArrow.addEventListener("click", (event) =>
-{
-    if (currentPage > 1)
+leftArrow.forEach(function(left,index) {
+    left.addEventListener("click", (event) =>
     {
-        currentPage--;
-        for (let i = currentPage*4-1, j = 3; i >= currentPage*4-4; i--,j--)
+        if (currentPage[index] > 1)
         {
-            forecastList[j].querySelector(".time").textContent = `${dataList[i]['day']} at ${dataList[i]['time']}`;
-            forecastList[j].querySelector("p").textContent = dataList[i]['description'];
-            forecastList[j].querySelector("img").src = dataList[i]['image'];
-            forecastList[j].querySelector(".temp").textContent = dataList[i]['temperature'];
+            currentPage[index]--;
+            forecastList[index].querySelector(".time").textContent = `${dayList[index][currentPage[index]-1]['day']} at ${dayList[index][currentPage[index]-1]['time']}`;
+            forecastList[index].querySelector("p").textContent = dayList[index][currentPage[index]-1]['description'];
+            forecastList[index].querySelector("img").src = dayList[index][currentPage[index]-1]['image'];
+            forecastList[index].querySelector(".temp").textContent = dayList[index][currentPage[index]-1]['temperature'];
         }
-    }
-    if (currentPage == 1)
-    {
-        leftArrow.setAttribute('class','no-display');
-    }
-    if (currentPage < 10)
-    {
-        rightArrow.setAttribute('class','next right');
-    }
+        if (currentPage[index] == 1)
+        {
+            left.setAttribute('class','no-display');
+        }
+        if (currentPage[index] < dayList[index].length)
+        {
+            rightArrow[index].setAttribute('class','next right');
+        }
+        // console.log(currentPage[index]);
+    });
 });
+
 
 async function apiFetch() {
     try {

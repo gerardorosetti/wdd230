@@ -339,30 +339,35 @@ footer {
 
 /* TESTING */
 
-.forecast{
-  /* display: flex;
-  justify-content: space-around; */
+.day1{
   display: grid;
-  grid-template-columns: 10% 40% 40% 10%;
-  grid-row: 6/7;
-  grid-column: 1/3;
-  width: 100%;
+  grid-template-columns: 5% 90% 5%;
   place-items: center;
 }
 
-.forecast-box{
-  /* position: fixed;
-  top: 0;
-  left: 0; */
-  /* background: rgba(0, 0, 0, .5); */
-  transition: transform 0.3s ease-in-out;
-  /* width: 100%;
-  height: 100vh;
-  z-index: 1000;
+.day2{
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  place-items: center;
+}
+
+.day3{
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  place-items: center;
+}
+
+.forecast{
   display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* transform: scale(0); */
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* display: grid;
+  grid-template-columns: 10% 40% 40% 10%; */
+  grid-row: 6/7;
+  grid-column: 1/3;
+  width: 100%;
+  /* place-items: center; */
 }
 
 .forecast-box {

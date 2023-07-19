@@ -41,8 +41,27 @@
         grid-template-columns: 35% 65%;
     }
     .forecast{
-        grid-template-columns: 4% 23% 23% 23% 23% 4%;
+        /* grid-template-columns: 5% 23% 23% 23% 23% 5%; */
+        /* grid-template-columns: 5% 30% 30% 30% 5%; */
+        /* grid-template-columns: repeat(3,1fr); */
+        /* display: flex; */
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 1.5%;
+        /* grid-template-columns: repeat(3,33.33333333%); */
     }
+
+    .day1{
+        grid-template-columns: 5% 80% 5%;
+    }
+    .day2{
+        grid-template-columns: 5% 80% 5%;
+    }
+    .day3{
+        grid-template-columns: 5% 80% 5%;
+    }
+
     .not-small{
         display: block;
     }
