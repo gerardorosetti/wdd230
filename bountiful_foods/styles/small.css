@@ -130,8 +130,13 @@ header nav a:hover{
   display: none;
 }
 
+.navigation li:hover {
+  border: 4px dashed #5B8C5A;
+}
+
 .navigation li:first-child{
   display: block;
+  border: none;
 }
 
 .navigation a {
@@ -189,8 +194,16 @@ main hr {
 
 .text-drink-mix button a {
   text-decoration: none;
-
 }
+
+.text-drink-mix button {
+  transition: transform .3s;
+}
+
+.text-drink-mix button:hover {
+  transform: scale(1.15);
+}
+
 
 .text-drink-mix button {
   position: absolute;
