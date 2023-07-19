@@ -206,5 +206,10 @@
         margin: 10px 0;
         height: 85%;
     }
+
+    .aboutUs .information h4{
+        overflow-x:visible;
+    }
+
     /* END ABOUT US */
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Kablammo&family=Roboto+Mono&family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Roboto+Mono&family=Ubuntu:ital@1&display=swap');
 
 h1, h2, h3, h4, h5, h6, .title-link {
   font-family: 'Ubuntu', serif, sans-serif;
@@ -675,11 +675,11 @@ main:has(.aboutUs) hr{
   margin-bottom: 5%;
 }
 
-.aboutUs.information h4:last-child{
+.aboutUs .information h4{
   overflow-x: scroll;
 }
 
-.aboutUs.information h4:last-child::-webkit-scrollbar{
+.aboutUs .information h4::-webkit-scrollbar{
   display: none;
 }
 
