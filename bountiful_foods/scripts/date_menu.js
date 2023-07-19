@@ -37,8 +37,6 @@ const currentYear = currentDate.getFullYear();
 const dayName = daynames[currentDate.getDay()]
 const monthName = months[currentDate.getMonth()]
 
-// document.querySelector('.footer-year').textContent = currentYear;
-
 document.querySelector('.last-updated').textContent = `Last Updated: ${document.lastModified}`
 
 document.querySelector('.date-header').textContent = `${dayName}, ${currentDate.getDate()} ${monthName} ${currentYear}`

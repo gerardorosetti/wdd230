@@ -36,11 +36,6 @@ const url = 'https://api.openweathermap.org/data/2.5/weather?q=Carlsbad,US&appid
 const url2 = 'https://api.openweathermap.org/data/2.5/forecast?lat=33.1581&lon=-117.3506&appid=c7a88691ff7f98908e15c855847369ba'
 
 function  displayResults(weatherData) {
-    // const current_weather = document.getElementsByClassName('current-weather')[0];
-    // const cw = current_weather.textContent;
-    // console.log(weatherData)
-    // current_weather.textContent = `${cw}: (${dayName})`;
-    // console.log(weatherData);
     const kelvin_temp = weatherData['main']['temp'];
     const f_temp = ((kelvin_temp - 273.15) * 9/5 + 32).toFixed(1);
     const c_temp = (kelvin_temp - 273.15).toFixed(1);
@@ -63,10 +58,6 @@ function  displayResults(weatherData) {
 }
 
 function  displayResults2(weatherData) {
-    // console.log(weatherData);
-    // console.log(forecastCont);
-    // console.log(forecastList);
-    // console.log(forecastList[0].querySelector(".time").textContent);
     weatherData['list'].forEach(element => {
         const item = {
             day: '',
@@ -127,8 +118,6 @@ function  displayResults2(weatherData) {
     dayList.push(day2);
     dayList.push(day3);
 
-    // console.log(day1);
-
     forecastList[0].querySelector(".time").textContent = `${day1[0]['day']} at ${day1[0]['time']}`;
     forecastList[0].querySelector("p").textContent = day1[0]['description'];
     forecastList[0].querySelector("img").src = day1[0]['image'];
@@ -168,7 +157,6 @@ rightArrow.forEach(function(right,index) {
         {
             leftArrow[index].setAttribute('class','next left');
         }
-        // console.log(currentPage[index]);
     });
 });
 
@@ -191,7 +179,6 @@ leftArrow.forEach(function(left,index) {
         {
             rightArrow[index].setAttribute('class','next right');
         }
-        // console.log(currentPage[index]);
     });
 });
 
